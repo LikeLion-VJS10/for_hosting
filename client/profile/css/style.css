@@ -1,5 +1,5 @@
-@import url(../../../client/css/theme.css);
-@import url(../../../client/css/a11yHidden.css);
+@import url(../../css/theme.css);
+@import url(../../css/a11yHidden.css);
 
 /* 기본 설정 구역 */
 body {
