@@ -1,5 +1,12 @@
-import { swiperSlide, swiper, swiper2, swiper3, hero } from './taing-swiper.js'
-import { attr, tiger, delayP, insertLast, getNode as $, renderLiveRankProgram } from '../lib/index.js'
+import { swiperSlide, swiper, swiper2, swiper3, hero } from "./taing-swiper.js";
+import {
+  attr,
+  tiger,
+  delayP,
+  insertLast,
+  getNode as $,
+  renderLiveRankProgram,
+} from "../lib/index.js";
 
 // const swiper = new Swiper(".mySwiper", {
 //     navigation: {
@@ -82,139 +89,139 @@ import { attr, tiger, delayP, insertLast, getNode as $, renderLiveRankProgram } 
 // }
 
 // userCardContainer.addEventListener('click',handler)
-let listdesk = document.querySelector('.desk .contents__list')
-let listtablet = document.querySelector('.tablet .contents__list')
+// let listdesk = document.querySelector('.desk .contents__list')
+// let listtablet = document.querySelector('.tablet .contents__list')
 
-function settingSwipers() {
-  let swiper = new Swiper('.slow', {
-    slidesPerView: 5,
-    spaceBetween: 10,
+// function settingSwipers() {
+//   let swiper = new Swiper('.slow', {
+//     slidesPerView: 5,
+//     spaceBetween: 10,
 
-    autoplay: {
-      delay: 0 //add
-    },
-    speed: 7000,
-    loop: true,
-    allowTouchMove: false, //드래그 슬라이드 막음
-    loopAdditionalSlides: 1,
-    loopFillGroupWithBlank: true,
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-        slidesPerGroup: 3
-      },
-      1024: {
-        slidesPerView: 5,
-        slidesPerGroup: 5
-      }
-    }
-  })
+//     autoplay: {
+//       delay: 0 //add
+//     },
+//     speed: 7000,
+//     loop: true,
+//     allowTouchMove: false, //드래그 슬라이드 막음
+//     loopAdditionalSlides: 1,
+//     loopFillGroupWithBlank: true,
+//     breakpoints: {
+//       768: {
+//         slidesPerView: 3,
+//         slidesPerGroup: 3
+//       },
+//       1024: {
+//         slidesPerView: 5,
+//         slidesPerGroup: 5
+//       }
+//     }
+//   })
 
-  let swiper2 = new Swiper('.fast', {
-    slidesPerView: 5,
-    spaceBetween: 10,
+//   let swiper2 = new Swiper('.fast', {
+//     slidesPerView: 5,
+//     spaceBetween: 10,
 
-    autoplay: {
-      delay: 0 //add
-    },
-    speed: 6000,
-    loop: true,
-    allowTouchMove: false, //드래그 슬라이드 막음
-    loopAdditionalSlides: 1,
-    loopFillGroupWithBlank: true,
+//     autoplay: {
+//       delay: 0 //add
+//     },
+//     speed: 6000,
+//     loop: true,
+//     allowTouchMove: false, //드래그 슬라이드 막음
+//     loopAdditionalSlides: 1,
+//     loopFillGroupWithBlank: true,
 
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-        slidesPerGroup: 3
-      },
-      1024: {
-        slidesPerView: 5,
-        slidesPerGroup: 5
-      }
-    }
-  })
-}
+//     breakpoints: {
+//       768: {
+//         slidesPerView: 3,
+//         slidesPerGroup: 3
+//       },
+//       1024: {
+//         slidesPerView: 5,
+//         slidesPerGroup: 5
+//       }
+//     }
+//   })
+// }
 
-async function tivingFun() {
-  let response = await fetch('http://localhost:3000/tivingFundDesk')
-    .then(response => response.json())
-    .then(data =>
-      data.map(item => {
-        let onLi = document.createElement('li')
-        let onImg = document.createElement('img')
-        onLi.classList.add('contents__item')
-        onImg.setAttribute('src', `${item.image}`)
-        onImg.setAttribute('alt', `${item.description}`)
-        onLi.appendChild(onImg)
-        listdesk.appendChild(onLi)
-      })
-    )
-    .then(() => {
-      settingSwipers()
-    })
-}
-tivingFun()
-async function tivingFun1() {
-  let response = await fetch('http://localhost:3000/tivingFundTablet')
-    .then(response => response.json())
-    .then(data =>
-      data.map(item => {
-        let onLi = document.createElement('li')
-        let onImg = document.createElement('img')
-        onLi.classList.add('contents__item')
-        onImg.setAttribute('src', `${item.image}`)
-        onImg.setAttribute('alt', `${item.description}`)
-        onLi.appendChild(onImg)
-        listtablet.appendChild(onLi)
-      })
-    )
-    .then(() => {
-      settingSwipers()
-    })
-}
-tivingFun1()
+// async function tivingFun() {
+//   let response = await fetch('http://localhost:3000/tivingFundDesk')
+//     .then(response => response.json())
+//     .then(data =>
+//       data.map(item => {
+//         let onLi = document.createElement('li')
+//         let onImg = document.createElement('img')
+//         onLi.classList.add('contents__item')
+//         onImg.setAttribute('src', `${item.image}`)
+//         onImg.setAttribute('alt', `${item.description}`)
+//         onLi.appendChild(onImg)
+//         listdesk.appendChild(onLi)
+//       })
+//     )
+//     .then(() => {
+//       settingSwipers()
+//     })
+// }
+// tivingFun()
+// async function tivingFun1() {
+//   let response = await fetch('http://localhost:3000/tivingFundTablet')
+//     .then(response => response.json())
+//     .then(data =>
+//       data.map(item => {
+//         let onLi = document.createElement('li')
+//         let onImg = document.createElement('img')
+//         onLi.classList.add('contents__item')
+//         onImg.setAttribute('src', `${item.image}`)
+//         onImg.setAttribute('alt', `${item.description}`)
+//         onLi.appendChild(onImg)
+//         listtablet.appendChild(onLi)
+//       })
+//     )
+//     .then(() => {
+//       settingSwipers()
+//     })
+// }
+// tivingFun1()
 
-let doubleList = document.querySelector('.slow-swiper')
-console.log(doubleList)
-async function wantFun1() {
-  let response = await fetch('http://localhost:3000/wantFun')
-    .then(response => response.json())
-    .then(data =>
-      data.map(item => {
-        let onLi = document.createElement('li')
-        let onImg = document.createElement('img')
-        onLi.classList.add('swiper-slide')
-        onImg.setAttribute('src', `${item.image}`)
-        // onImg.setAttribute('alt', `${item.description}`)
-        onLi.appendChild(onImg)
-        doubleList.appendChild(onLi)
-      })
-    )
-    .then(() => {
-      settingSwipers()
-    })
-}
-wantFun1()
+// let doubleList = document.querySelector('.slow-swiper')
+// console.log(doubleList)
+// async function wantFun1() {
+//   let response = await fetch('http://localhost:3000/wantFun')
+//     .then(response => response.json())
+//     .then(data =>
+//       data.map(item => {
+//         let onLi = document.createElement('li')
+//         let onImg = document.createElement('img')
+//         onLi.classList.add('swiper-slide')
+//         onImg.setAttribute('src', `${item.image}`)
+//         // onImg.setAttribute('alt', `${item.description}`)
+//         onLi.appendChild(onImg)
+//         doubleList.appendChild(onLi)
+//       })
+//     )
+//     .then(() => {
+//       settingSwipers()
+//     })
+// }
+// wantFun1()
 
-let doubleList2 = document.querySelector('.fast-swiper ')
-console.log(doubleList2)
-async function wantFun2() {
-  let response = await fetch('http://localhost:3000/wantFun')
-    .then(response => response.json())
-    .then(data =>
-      data.map(item => {
-        let onLi = document.createElement('li')
-        let onImg = document.createElement('img')
-        onLi.classList.add('swiper-slide')
-        onImg.setAttribute('src', `${item.image}`)
-        // onImg.setAttribute('alt', `${item.description}`)
-        onLi.appendChild(onImg)
-        doubleList2.appendChild(onLi)
-      })
-    )
-    .then(() => {
-      settingSwipers()
-    })
-}
-wantFun2()
+// let doubleList2 = document.querySelector('.fast-swiper ')
+// console.log(doubleList2)
+// async function wantFun2() {
+//   let response = await fetch('http://localhost:3000/wantFun')
+//     .then(response => response.json())
+//     .then(data =>
+//       data.map(item => {
+//         let onLi = document.createElement('li')
+//         let onImg = document.createElement('img')
+//         onLi.classList.add('swiper-slide')
+//         onImg.setAttribute('src', `${item.image}`)
+//         // onImg.setAttribute('alt', `${item.description}`)
+//         onLi.appendChild(onImg)
+//         doubleList2.appendChild(onLi)
+//       })
+//     )
+//     .then(() => {
+//       settingSwipers()
+//     })
+// }
+// wantFun2()

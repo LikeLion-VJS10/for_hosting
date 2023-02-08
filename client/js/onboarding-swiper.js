@@ -1,53 +1,53 @@
 // 스와이퍼 라이브러리 설정
-function settingSwipers() {
-  let swiper = new Swiper('.slow', {
-    slidesPerView: 5,
-    spaceBetween: 10,
+// function settingSwipers() {
+//   let swiper = new Swiper('.slow', {
+//     slidesPerView: 5,
+//     spaceBetween: 10,
 
-    autoplay: {
-      delay: 0 //add
-    },
-    speed: 7000,
-    loop: true,
-    allowTouchMove: false, //드래그 슬라이드 막음
-    loopAdditionalSlides: 1,
-    loopFillGroupWithBlank: true
-  })
+//     autoplay: {
+//       delay: 0 //add
+//     },
+//     speed: 7000,
+//     loop: true,
+//     allowTouchMove: false, //드래그 슬라이드 막음
+//     loopAdditionalSlides: 1,
+//     loopFillGroupWithBlank: true
+//   })
 
-  let swiper2 = new Swiper('.fast', {
-    slidesPerView: 5,
-    spaceBetween: 10,
+//   let swiper2 = new Swiper('.fast', {
+//     slidesPerView: 5,
+//     spaceBetween: 10,
 
-    autoplay: {
-      delay: 0 //add
-    },
-    speed: 6000,
-    loop: true,
-    allowTouchMove: false, //드래그 슬라이드 막음
-    loopAdditionalSlides: 1,
-    loopFillGroupWithBlank: true
-  })
-}
+//     autoplay: {
+//       delay: 0 //add
+//     },
+//     speed: 6000,
+//     loop: true,
+//     allowTouchMove: false, //드래그 슬라이드 막음
+//     loopAdditionalSlides: 1,
+//     loopFillGroupWithBlank: true
+//   })
+// }
 
-function renderMovieList() {
-  // 동적으로 가져온 영화 데이터를 화면에 렌더링
-}
+// function renderMovieList() {
+//   // 동적으로 가져온 영화 데이터를 화면에 렌더링
+// }
 
-function fetchMovieData() {
-  // 서버에 영화 데이터 요청
-  // 프로미스 객체 반환
-  return fetch('....')
-}
+// function fetchMovieData() {
+//   // 서버에 영화 데이터 요청
+//   // 프로미스 객체 반환
+//   return fetch('....')
+// }
 
-export function init() {
-  fetchMovieData()
-    .then(() => {
-      return renderMovieList()
-    })
-    .then(() => {
-      settingSwipers()
-    })
-}
+// export function init() {
+//   fetchMovieData()
+//     .then(() => {
+//       return renderMovieList()
+//     })
+//     .then(() => {
+//       settingSwipers()
+//     })
+// }
 
 // init()
 
@@ -81,3 +81,30 @@ export function init() {
 // }
 
 // // assignSlowSwiper()
+
+let swiper = new Swiper(".slow", {
+  slidesPerView: 5,
+  spaceBetween: 10,
+
+  autoplay: {
+    delay: 0, //add
+  },
+  speed: 7000,
+  loop: true,
+  allowTouchMove: false, //드래그 슬라이드 막음
+  loopAdditionalSlides: 1,
+  loopFillGroupWithBlank: true,
+});
+let swiper2 = new Swiper(".fast", {
+  slidesPerView: 5,
+  spaceBetween: 10,
+
+  autoplay: {
+    delay: 0, //add
+  },
+  speed: 6000,
+  loop: true,
+  allowTouchMove: false, //드래그 슬라이드 막음
+  loopAdditionalSlides: 1,
+  loopFillGroupWithBlank: true,
+});
