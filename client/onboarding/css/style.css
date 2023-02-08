@@ -153,7 +153,10 @@ a {
 .onboardingOriginal {
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
+
+
 
 .info__mainText {
   font-size: var(--heading-xxxl);
@@ -164,6 +167,10 @@ a {
 .contents__item img {
   width: 904px;
   height: 510px;
+}
+
+.onboardingWantSee {
+  overflow: hidden;
 }
 .onboardingWantSee .info {
   margin-top: 160px;
