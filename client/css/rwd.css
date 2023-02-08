@@ -19,6 +19,8 @@
   .swiper-button-next {
     color: white;
   }
+
+
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -69,5 +71,21 @@
   .swiper-button-next {
     color: white;
     transform: scale(50%);
+  }
+
+  .taing-live-rank__container {
+    padding: 0 0 36px 40px;
+  }
+
+  .contents__inner {
+    padding: 0 40px 36px;
+  }
+
+  .taing-must__container {
+    padding: 0 0 36px 40px;
+  }
+
+  .taing-only-tving__container {
+    padding: 0 0 36px 40px;
   }
 }
