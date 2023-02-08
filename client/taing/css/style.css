@@ -45,6 +45,10 @@ figcaption {
 .clickable {
   z-index: 10;
 }
+.border-box{
+  box-sizing: border-box;
+  padding: 5rem 0;
+}
 
 /** ---------------------------- **/
 
@@ -326,6 +330,8 @@ figcaption {
 
 .taing-live-rank__list li {
   transition: all 0.5s;
+  box-sizing: border-box;
+  padding-bottom: 36px;
 }
 
 .taing-live-rank__list li:hover {
