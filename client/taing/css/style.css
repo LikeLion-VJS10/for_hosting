@@ -45,7 +45,7 @@ figcaption {
 .clickable {
   z-index: 10;
 }
-.border-box{
+.border-box {
   box-sizing: border-box;
   padding: 5rem 0;
 }
@@ -144,6 +144,10 @@ figcaption {
   top: 0;
   display: flex;
   width: 100%;
+}
+
+.controler .swiper-button-next {
+  pointer-events: all;
 }
 
 .contents {
@@ -559,7 +563,7 @@ footer {
   margin-bottom: 5rem;
   /* width: 100%; */
 }
-.footer-wrap{
+.footer-wrap {
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
