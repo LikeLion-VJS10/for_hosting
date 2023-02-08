@@ -1,6 +1,5 @@
-@import url(../../../client/css/theme.css);
-@import url(./theme_suyeong.css);
-@import url(./a11yHidden.css);
+@import url(../../css/theme.css);
+@import url(../../css/a11yHidden.css);
 
 /* 폰트사이즈, 컬러, 배경컬러 설정 */
 html {
@@ -24,7 +23,7 @@ html {
 }
 
 body {
-  background: no-repeat url(../../../client/assets/img/desktop/landing/backgorund.png);
+  background: no-repeat url(../../assets/img/desktop/landing/backgorund.png);
   background-size: 100%;
 }
 
