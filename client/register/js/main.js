@@ -1,4 +1,4 @@
-import { getNode, getNodes, loadStorage, saveStorage, getInputValue, addClass, removeClass, clearContents, attr } from "../../../client/lib/index.js";
+import { getNode, getNodes, loadStorage, saveStorage, getInputValue, addClass, removeClass, clearContents, attr } from "../../lib/index.js";
 
 const ID = getNode("#inputID");
 const PW = getNode("#inputPW");
