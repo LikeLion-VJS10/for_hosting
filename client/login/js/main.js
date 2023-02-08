@@ -1,4 +1,4 @@
-import { getNode, attr, getInputValue } from "../../../client/lib/index.js";
+import { getNode, attr, getInputValue, addClass, removeClass } from "../../../client/lib/index.js";
 
 const ID = getNode("#ID");
 const PW = getNode("#PW");
@@ -45,11 +45,16 @@ ID.addEventListener("keyup", () => {
 
 PW.addEventListener("keyup", () => {
   let value = getInputValue(PW);
+  let valueID = getInputValue(ID);
 
-  if (value.length >= 8 && value.length <= 15) {
+  if (value.length >= 8 && value.length <= 15 && valueID.includes("@") && valueID.includes(".")) {
     rulePW.textContent = "";
+    loginBtn.disabled = true;
+    addClass(loginBtn, "is-active");
   } else {
     rulePW.textContent = "올바른 비밀번호 형식이 아닙니다.";
     rulePW.style.color = "#ff153c";
+    loginBtn.disabled = false;
+    removeClass(loginBtn, "is-active");
   }
 });
