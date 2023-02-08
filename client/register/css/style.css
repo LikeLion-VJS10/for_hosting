@@ -170,7 +170,7 @@ button {
   right: 1.875rem;
 }
 
-.delete {
+.clear {
   position: absolute;
   width: 2.25rem;
   height: 2.25rem;
@@ -179,7 +179,7 @@ button {
   right: 1.875rem;
 }
 
-.delete:nth-child(3) {
+.clear:nth-child(3) {
   margin-right: 3.125rem;
 }
 
@@ -199,7 +199,7 @@ button {
   user-select: none;
 }
 
-.auto-login-wrapper input[type='checkbox'] {
+.auto-login-wrapper input[type="checkbox"] {
   display: none;
 }
 .checked {
@@ -216,7 +216,7 @@ button {
   line-height: 16px;
   line-height: 16px;
 }
-.auto-login-wrapper input[type='checkbox']:checked + .checked {
+.auto-login-wrapper input[type="checkbox"]:checked + .checked {
   background-color: var(--brand-red-1);
   color: var(--white);
   text-align: center;
@@ -339,7 +339,7 @@ button {
   color: var(--gray-500);
 }
 
-.agree-inner-wrap input[type='checkbox']:checked + .checked {
+.agree-inner-wrap input[type="checkbox"]:checked + .checked {
   background: none;
   color: var(--brand-red-1);
   text-align: center;
@@ -359,7 +359,7 @@ footer {
   margin-bottom: 5rem;
   /* width: 100%; */
 }
-.footer-wrap{
+.footer-wrap {
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
