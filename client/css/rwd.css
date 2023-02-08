@@ -1,0 +1,73 @@
+/* -----------------반응형 미디어 쿼리----------------- */
+
+@media (min-width: 768px) {
+  .contents {
+    bottom: 0;
+  }
+
+  .login-wrapper {
+    width: calc(100% / 2);
+  }
+  .auto-login-text {
+    margin-left: 2rem;
+  }
+
+  .swiper-button-prev {
+    color: white;
+  }
+
+  .swiper-button-next {
+    color: white;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .contents {
+    bottom: 0;
+  }
+  .content--control {
+    margin: 0 auto;
+  }
+
+  .login-wrapper {
+    /* box-sizing: border-box; */
+    width: 90%;
+    /* padding: 1rem; */
+  }
+  .auto-login-text {
+    margin-left: 2.5rem;
+  }
+
+  /* -------------헤더------------- */
+  
+  .webHeader__NavMenu {
+    display: none;
+  }
+  
+  .member-container__btn{
+    width: 4rem;
+    margin: 0;
+  }
+  
+  /* -------------푸터------------- */
+  
+  .footer-info {
+    display: none;
+  }
+  .appFooter--list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* -------------스와이퍼 버튼------------- */
+
+  .swiper-button-prev {
+    color: white;
+    transform: scale(50%);
+  }
+
+  .swiper-button-next {
+    color: white;
+    transform: scale(50%);
+  }
+}
